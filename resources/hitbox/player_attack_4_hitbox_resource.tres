@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="HitboxResource" load_steps=3 format=3 uid="uid://djiow07q73xh3"]
+
+[ext_resource type="Script" uid="uid://c1f6a6k0o0w30" path="res://scripts/resources/HitboxResource.gd" id="1_43qb1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8svfe"]
+size = Vector2(88, 33)
+
+[resource]
+script = ExtResource("1_43qb1")
+collision_layer = 4
+collision_mask = 8
+one_shot = false
+animate = true
+damage = 1.0
+knockback_force = 250.0
+kb_modifier = Vector2(0, -100)
+collision_shape = SubResource("RectangleShape2D_8svfe")
+position = Vector2(5, 0)
+color_color_name = 2
+color_debug_color = Color(1, 0, 0, 0.419608)
+metadata/_custom_type_script = "uid://c1f6a6k0o0w30"

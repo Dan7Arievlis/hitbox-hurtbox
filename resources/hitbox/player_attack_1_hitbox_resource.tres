@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="HitboxResource" load_steps=3 format=3 uid="uid://lemu68s112t2"]
+
+[ext_resource type="Shape2D" uid="uid://0d0hcgvnem6d" path="res://assets/shapes/hitbox/player_attack_1_hitbox.tres" id="1_exfpn"]
+[ext_resource type="Script" uid="uid://c1f6a6k0o0w30" path="res://scripts/resources/HitboxResource.gd" id="1_gb8eh"]
+
+[resource]
+script = ExtResource("1_gb8eh")
+collision_layer = 4
+collision_mask = 8
+one_shot = false
+animate = true
+damage = 1.0
+knockback_force = 100.0
+kb_modifier = Vector2(0, -100)
+collision_shape = ExtResource("1_exfpn")
+position = Vector2(32, 2)
+color_color_name = 2
+color_debug_color = Color(1, 0, 0, 0.419608)
+metadata/_custom_type_script = "uid://c1f6a6k0o0w30"

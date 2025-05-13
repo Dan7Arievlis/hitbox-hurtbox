@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://db2aov3xv8yar"]
+
+[ext_resource type="Script" uid="uid://c5iguymnqfp1a" path="res://scripts/Hurtbox.gd" id="1_ksusc"]
+[ext_resource type="Script" uid="uid://0n1fewldmsv1" path="res://scripts/Visualizer.gd" id="2_ppkhk"]
+
+[node name="Hurtbox" type="Area2D"]
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("1_ksusc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+debug_color = Color(4.81308e-06, 0.643143, 0.305371, 0.42)
+
+[node name="Visualizer" type="Node2D" parent="." node_paths=PackedStringArray("parent_node")]
+script = ExtResource("2_ppkhk")
+parent_node = NodePath("..")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]

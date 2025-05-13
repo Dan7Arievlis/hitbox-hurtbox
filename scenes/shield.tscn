@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cnlk0bdpwgbyg"]
+
+[ext_resource type="Script" uid="uid://cmdowif2cyv87" path="res://scripts/Shield.gd" id="1_vtru8"]
+
+[node name="Shield" type="Node2D" node_paths=PackedStringArray("protected_areas")]
+script = ExtResource("1_vtru8")
+protected_areas = [NodePath("")]
+damage_negation = 1.0

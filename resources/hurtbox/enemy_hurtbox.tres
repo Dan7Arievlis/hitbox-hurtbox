@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="HurtboxResource" load_steps=3 format=3 uid="uid://b7iwotpl25p2h"]
+
+[ext_resource type="Shape2D" uid="uid://b5vb6hjefriwj" path="res://assets/shapes/hurtbox/enemy_hurtbox.tres" id="1_23f5f"]
+[ext_resource type="Script" uid="uid://cnslximtnvgqv" path="res://scripts/resources/HurtboxResource.gd" id="1_tiqcu"]
+
+[resource]
+script = ExtResource("1_tiqcu")
+collision_layer = 8
+collision_mask = 4
+max_life = 20.0
+invulnerability_cooldown = 0.4
+kb_resistance = 0.0
+collision_shape = ExtResource("1_23f5f")
+position = Vector2(0, 2)
+color_color_name = 1
+color_debug_color = Color(0, 0.643137, 0.305882, 0.419608)
+metadata/_custom_type_script = "uid://cnslximtnvgqv"

@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://bxngixq0151r"]
+
+[ext_resource type="PackedScene" uid="uid://btu34wxqcqolv" path="res://scenes/hitbox.tscn" id="1_bflj7"]
+[ext_resource type="Script" uid="uid://c1f6a6k0o0w30" path="res://scripts/resources/HitboxResource.gd" id="2_kd5gq"]
+[ext_resource type="Texture2D" uid="uid://ch3cssfkmqpvw" path="res://icon.svg" id="3_0vi4p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w4mxr"]
+size = Vector2(129, 129)
+
+[sub_resource type="Resource" id="Resource_xa8pu"]
+script = ExtResource("2_kd5gq")
+collision_layer = 8
+collision_mask = 1
+one_shot = false
+animate = true
+damage = 1.0
+knockback_force = 100.0
+kb_modifier = Vector2(0, 200)
+collision_shape = SubResource("RectangleShape2D_w4mxr")
+position = Vector2(0, 0)
+color_color_name = 2
+color_debug_color = Color(1, 0, 0, 0.419608)
+metadata/_custom_type_script = "uid://c1f6a6k0o0w30"
+
+[node name="StaticBody2D" type="StaticBody2D"]
+scale = Vector2(4.85, 0.29)
+
+[node name="Hitbox" parent="." instance=ExtResource("1_bflj7")]
+z_index = 1
+hitbox_resource = SubResource("Resource_xa8pu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 0.11, 0.11, 1)
+texture = ExtResource("3_0vi4p")
